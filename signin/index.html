@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sing In</title>
+    <link rel="stylesheet" href="./style.css" />
+  <script>
+    // Seleciona o formulário
+const form = document.querySelector("form");
+
+// Captura o evento de envio
+form.addEventListener("submit", async (event) => {
+  event.preventDefault(); // Evita o recarregamento da página
+
+  // Pega os valores dos campos
+  const email = document.querySelector("#email").value.trim();
+  const password = document.querySelector("#password").value.trim();
+
+  // Validação simples
+  if (!email || !password) {
+    alert("Please fill in both fields.");
+    return;
+  }
+
+  try {
+    // Envia os dados para o backend (ajuste a URL conforme seu servidor)
+    const response = await fetch("http://localhost:8080", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, password }),
+    });
+
+    // Lê a resposta como JSON
+    const data = await response.json();
+
+    // Trata a resposta
+    if (response.ok) {
+      alert("✅ Login successful!");
+      console.log("User data:", data);
+
+      // Exemplo: salvar token no localStorage
+      if (data.token) {
+        localStorage.setItem("token", data.token);
+      }
+
+      // Redirecionar para outra página
+      window.location.href = "/dashboard.html";
+    } else {
+      // Mostra mensagem de erro vinda do backend
+      alert(`❌ Error: ${data.message || "Invalid credentials"}`);
+    }
+  } catch (error) {
+    console.error("Error connecting to server:", error);
+    alert("⚠️ Server error. Please try again later.");
+  }
+});
+  </script>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="form-container">
+          <h1>Welcome back!</h1>
+          <p>Enter your Credentials to access your account</p>
+          <form action="" method="post">
+            <fieldset>
+              <label for="email">Email address</label>
+              <input
+                placeholder="Enter your name"
+                type="email"
+                name="email"
+                id="email"
+              />
+            </fieldset>
+
+            <fieldset>
+              <div class="title-wrapper">
+                <label for="password">Password</label>
+                <a href="">forgot password</a>
+              </div>
+              <input
+                placeholder="Name"
+                type="password"
+                name="password"
+                id="password"
+              />
+            </fieldset>
+
+            <fieldset class="checkbox">
+              <input type="checkbox" name="remember" id="remember" />
+              <label for="remember">Remember for 30 days</label>
+            </fieldset>
+
+            <button type="submit">login</button>
+          </form>
+
+          <div class="divider">
+            <div class="line"></div>
+            <p>or</p>
+            <div class="line"></div>
+          </div>
+        </div>
+      </section>
+      <img
+        src="../assets/img/costela_de_adao.png"
+        alt="Foto de uma planta costela de adao"
+      />
+    </main>
+  </body>
+</html>
