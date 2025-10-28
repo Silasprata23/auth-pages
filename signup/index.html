@@ -1,12 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="form-conteiner">
+          <h1>Get Started Now</h1>
+          <form action="" method="post">
+            <fieldset>
+              <label for="name">Name</label>
+              <input
+                placeholder="Enter your name"
+                type="text"
+                name="name"
+                id="name"
+              />
+            </fieldset>
+            <fieldset>
+              <label for="email">Email address</label>
+              <input
+                placeholder="Enter your name"
+                type="email"
+                name="email"
+                id="email"
+              />
+            </fieldset>
+
+            <fieldset>
+              <div class="title-wrapper">
+                <label for="password">Password</label>
+                <a href="">forgot password</a>
+              </div>
+              <input
+                placeholder="Name"
+                type="password"
+                name="password"
+                id="password"
+              />
+            </fieldset>
+
+            <fieldset class="checkbox">
+              <input type="checkbox" name="terms" id="terms" />
+              <label for="terms">I agree to the terms & policy</label>
+            </fieldset>
+
+            <button type="submit">Signup</button>
+          </form>
+
+          <div class="divider">
+            <div class="line"></div>
+            <p>or</p>
+            <div class="line"></div>
+          </div>
+          <div class="sso-container">
+            <button>
+              <img src="../assets/icons/icon_google.svg" alt="logo google" />
+              <p>Sing in with Google</p>
+            </button>
+            <button>
+              <img src="../assets/icons/icon_apple.svg" alt="logo apple" />
+              <p>Sing in with Apple</p>
+            </button>
+          </div>
+          <p class="redirect-sign-in">Have an account?<a href="../signin/index.html">Sign in</a></p>
+        </div>
+      </section>
+      <img
+        src="../assets/img/costela_de_adao.png"
+        alt="Foto de uma planta costela de adao"
+      />
+    </main>
+  </body>
 </html>

@@ -1,1 +1,163 @@
-@import url("../styles/reset.css");
+@import url("../styles/global.css");
+
+main {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+}
+
+section {
+    width: 49.2%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.form-container>p {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 22px;
+    color: var(--black);
+
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--black);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 60px;
+
+
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.checkbox {
+    flex-direction: row;
+    gap: 6px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.checkbox>label {
+    font-size: 9px;
+}
+
+form button {
+    height: 35.4px;
+    background-color: var(--green);
+    color: var(--white);
+    border-radius: 10px;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.title-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+img {
+    width: 50.8%;
+    object-fit: cover;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--black);
+}
+
+input[ type="password"],
+input[type="email"],
+input[ type="text"] {
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+}
+
+input::placeholder {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--gray);
+    padding: 8.5px 10px;
+}
+
+a {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--blue);
+}
+
+.divider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 34px;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--border-gray);
+}
+
+.sso-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+    margin-top: 89px;
+}
+
+
+.sso-container img {
+    width: 24px;
+    height: 24px;
+}
+
+.sso-container button {
+    height: 32px;
+    gap: 10px;
+    padding: 4px 24px;
+    border: 1px solid var(--border-gray);
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sso-container p {
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+}
+
+.redirect-sign-in {
+    font-size: 14px !important;
+    color: var(--black);
+    justify-self: center;
+    margin-top: 22px;
+}
+
+.redirect-sign-in a {
+    font-size: 14px;
+    color: var(--blue);
+}

@@ -57,7 +57,7 @@ fieldset{
     font-size: 9px;
 }
 
-button{
+form button {
     height: 35.4px;
     background-color: var(--green);
     color: var(--white);
@@ -74,6 +74,7 @@ justify-content: space-between;
 
 img{
     width: 50.8%;
+    object-fit: cover;
 }
 
 label {
@@ -105,11 +106,54 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid red;
+    margin-top: 34px;
 }
 
 .line{
     width: 100%;
     height: 2px;
     background-color: var(--border-gray);
+}
+.sso-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+    margin-top: 89px;
+}
+
+
+.sso-container img {
+    width: 24px;
+    height: 24px;
+}
+
+.sso-container button {
+    height: 32px;
+    gap: 10px;
+    padding: 4px 24px;
+    border: 1px solid var(--border-gray);
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sso-container p {
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+}
+
+.redirect-sign-up {
+    font-size: 14px !important;
+    color: var(--black);
+   justify-self: center;
+   margin-top: 22px;
+}
+
+.redirect-sign-up a {
+    font-size: 14px;
+    color: var(--blue);
 }
